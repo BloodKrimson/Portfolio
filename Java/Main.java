@@ -6,6 +6,7 @@ public class Main{
 
         Conversion test = new Conversion(2);
         System.out.println(test.getPounds());
-
+        test.setK(42);
+        System.out.println(test.getPounds());
     }
 }

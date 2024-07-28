@@ -4,7 +4,6 @@ public class Conversion {
     private double pounds;
     public Conversion(double kg){
         kilo = kg;
-        pounds = kilo*klMult;
     }
     public void setK(double kg){
         kilo = kg;
