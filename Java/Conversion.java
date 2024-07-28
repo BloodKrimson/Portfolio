@@ -9,6 +9,7 @@ public class Conversion {
         kilo = kg;
     }
     public double getPounds(){
+        pounds = kilo*klMult;
         return pounds;
     }
 }
