@@ -3,6 +3,9 @@ public class Main{
         System.out.println("Hello World!");
         HelloWorld hw = new HelloWorld();
         hw.greet();
-        
+
+        Conversion test = new Conversion(2);
+        System.out.println(test.getPounds());
+
     }
 }
