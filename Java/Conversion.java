@@ -1,15 +1,12 @@
+import java.util.Scanner;
+
 public class Conversion {
-    private static double klMult = 2.205;
-    private double kilo;
-    private double pounds;
-    public Conversion(double kg){
-        kilo = kg;
-    }
-    public void setK(double kg){
-        kilo = kg;
-    }
-    public double getPounds(){
-        pounds = kilo*klMult;
-        return pounds;
-    }
+   public static void main(String[] args){
+    float mult = (float) 2.205;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter a number of kilos: ");
+        float kg = s.nextFloat();
+        float lbs = kg * mult;
+        System.out.println(kg + " kg is " + lbs + " pounds");
+   }
 }
