@@ -30,6 +30,6 @@ public class Cards{
         }else{
             suitName = "spades";
         }
-
+        
     }
 }
