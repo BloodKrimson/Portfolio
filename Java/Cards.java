@@ -10,15 +10,16 @@ import java.lang.Math;
 public class Cards{
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
-        System.out.print("Enter 'Y' to manually enter a card from the deck or 'N' to randomly generate a card: ");
-        String suitName, cardIdentity, userInput = scan.next();
+        System.out.print("Would you like to enter a card? ");
+        String suitName = "", cardIdentity = "", userInput = scan.next();
         int cardNumber;
         char userChoice = userInput.charAt(0);
         if(userChoice == 'Y'){
-            System.out.print("Enter an integer between 0 to 51: ");
+            System.out.print("Enter a card number: ");
             cardNumber = scan.nextInt();
         }else{
             cardNumber = (int)(Math.random()*52);
+            System.out.println("Random Number: " + cardNumber);
         }
         int sid = cardNumber/13;
         if(sid == 0){
@@ -30,6 +31,55 @@ public class Cards{
         }else{
             suitName = "spades";
         }
-        
+
+        sid = cardNumber%13;
+        switch(sid){
+            case 0:
+            cardIdentity = "Ace";
+            break;
+            case 1:
+            sid++;
+            cardIdentity = Integer.toString(sid);
+            break;
+            case 2:
+            sid++;
+            cardIdentity = Integer.toString(sid);
+            break;
+            case 3:
+            sid++;
+            cardIdentity = Integer.toString(sid);
+            break;
+            case 4:
+            sid++;
+            cardIdentity = Integer.toString(sid);
+            break;
+            case 5:
+            sid++;
+            cardIdentity = Integer.toString(sid);
+            break;
+            case 6:
+            sid++;
+            cardIdentity = Integer.toString(sid);
+            break;
+            case 7:
+            sid++;
+            cardIdentity = Integer.toString(sid);
+            break;
+            case 8:
+            sid++;
+            cardIdentity = Integer.toString(sid);
+            break;
+            case 10:
+            cardIdentity = "Jack";
+            break;
+            case 11:
+            cardIdentity = "Queen";
+            break;
+            case 12:
+            cardIdentity = "King";
+            break;
+        }
+
+        System.out.println("You picked the " + cardIdentity + " of " + suitName + "!");
     }
 }
