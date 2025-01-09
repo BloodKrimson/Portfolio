@@ -1,7 +1,7 @@
 import java.io.*;
 
 public class CreateFile {
-    String name;
+    private String name;
     public CreateFile(){
         name = "file.txt";
         createFile(name);
