@@ -19,7 +19,14 @@ public class Main {
         List<String> Uinfo = new ArrayList<String>();
         int length = Uinfo.size();
         System.out.println(length);
-        String name, un, pswd, email;
+        String name, un, pswd, email, response;
+        boolean existingMemb = false;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Are you an existing member? (Yes/No): ");
+        response = s.nextLine();
+        while(!response.toLowerCase().equals("yes")&&!response.toLowerCase().equals("no")){
+            System.out.print("your goofy");
+        }
         // CreateFile f = new CreateFile();
         // System.out.print(f.getName());
         // Scanner s = new Scanner(System.in);  
